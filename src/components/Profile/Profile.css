@@ -1,0 +1,114 @@
+.profile {
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-blue);
+    border-radius: var(--border-radius);
+}
+
+.profile__content {
+    background-color: var(--blue);
+    flex: 1 1 0;
+    border-radius: var(--border-radius);
+    padding: var(--padding-card);
+}
+
+.profile__picture {
+    display: inline-block;
+    border: 3px solid var(--white);
+    border-radius: 50%;
+    margin-bottom: 2.5em;
+}
+
+.profile__picture img {
+    vertical-align: middle;
+}
+
+.profile__name span {
+    color: var(--pale-blue);
+    font-weight: 300;
+    display: inline-block;
+    margin-bottom: 0.5em;
+}
+
+.profile__name h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: var(--white);
+    font-weight: 300;
+}
+
+.profile__menu {
+    list-style: none;
+    margin: 0;
+    padding: var(--padding-card);
+}
+
+.profile__menu li {
+    margin-bottom: 1.25em;
+}
+
+.profile__menu li span {
+    color: var(--pale-blue);
+    font-weight: 300;
+    cursor: pointer;
+    display: inline-block;
+    transform: scale(1);
+    transition: all ease-in-out 0.35s;
+}
+
+.profile__menu li:not(.active) span:hover {
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.profile__menu li.active span {
+    color: var(--white);
+}
+
+.profile__menu li:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .profile {
+        grid-row: unset;
+        grid-column: 1 / 4;
+    }
+
+    .profile__content {
+        display: flex;
+        flex: unset;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .profile__picture {
+        margin-bottom: 0;
+    }
+
+    .profile__menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .profile__menu li {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .profile {
+        grid-column: 1 / 3;
+    }
+
+    .profile__name h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .profile {
+        grid-column: 1 / 2;
+    }
+}

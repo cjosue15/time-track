@@ -1,0 +1,116 @@
+.card__banner {
+    width: 100%;
+    height: 4.5em;
+    margin-bottom: -1.75em;
+    background-size: 4em;
+    background-repeat: no-repeat;
+    background-position: 90% -10%;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.card.work .card__banner {
+    background-image: url('../../assets/images/icon-work.svg');
+    background-color: var(--ligh-red-work);
+}
+
+.card.play .card__banner {
+    background-image: url('../../assets/images/icon-play.svg');
+    background-color: var(--soft-blue-play);
+}
+
+.card.study .card__banner {
+    background-image: url('../../assets/images/icon-study.svg');
+    background-color: var(--light-red-study);
+}
+
+.card.exercise .card__banner {
+    background-image: url('../../assets/images/icon-exercise.svg');
+    background-color: var(--lime-green-exercise);
+}
+
+.card.social .card__banner {
+    background-image: url('../../assets/images/icon-social.svg');
+    background-color: var(--violet-social);
+}
+
+.card.self-care .card__banner {
+    background-image: url('../../assets/images/icon-self-care.svg');
+    background-color: var(--soft-orange-self-care);
+}
+
+.card__body {
+    background-color: var(--dark-blue);
+    padding: var(--padding-card);
+    border-radius: var(--border-radius);
+    transition: background-color ease 0.25s;
+}
+
+.card__body:hover {
+    background-color: var(--dark-blue-hover);
+}
+
+.card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.card__header-title {
+    color: var(--white);
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0;
+}
+
+.card__header-options {
+    cursor: pointer;
+    display: inherit;
+}
+
+.card__header-options img {
+    vertical-align: middle;
+}
+
+.card__header-options {
+    position: relative;
+    transition: all ease 0.5ms;
+}
+
+.card__header-options:hover {
+    transform: scale(1.2);
+}
+
+.card__hours {
+    color: var(--white);
+    display: block;
+    font-size: 3em;
+    line-height: 1em;
+    font-weight: 300;
+    margin-bottom: 0.33em;
+}
+
+small.card__description {
+    color: var(--pale-blue);
+    font-weight: 300;
+}
+
+@media screen and (max-width: 769px) {
+    .card__time {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5em;
+    }
+
+    .card__hours {
+        font-size: 1.5em;
+        line-height: 1em;
+        margin-bottom: 0;
+    }
+
+    .card__description {
+        text-align: right;
+    }
+}
